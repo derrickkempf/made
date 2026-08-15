@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Made in the USA — MADE artes Clone</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<div class="header-wrap">
+  <header class="header">
+    <button class="header__menu ui" data-drawer-open>
+      <span style="margin-right:1rem">Menu</span>
+      <svg class="icon-search" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" style="width:1.6rem"><path d="M1 3h14M1 8h14M1 13h14"/></svg>
+    </button>
+    <a class="header__logo" href="index.html">MADE artes</a>
+    <div class="header__actions">
+      <button aria-label="Search">
+        <svg class="icon-search" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="7" cy="7" r="5"/><path d="M11 11l4 4"/></svg>
+      </button>
+      <a class="ui header__login" href="#">Log in</a>
+      <a class="ui" href="#">Cart&nbsp;&nbsp;0</a>
+    </div>
+  </header>
+</div>
+
+<!-- Drawer menu -->
+<div class="drawer" data-drawer>
+  <nav class="drawer__panel">
+    <button class="ui drawer__close" data-drawer-close>Close ✕</button>
+    <div class="drawer__group">
+      <h4>Shop</h4>
+      <a href="collection.html">New Arrivals</a>
+      <a href="#">Apparel</a>
+      <a href="#">Accessories</a>
+      <a href="#">Gear</a>
+      <a href="#">Home &amp; Workshop</a>
+      <a href="collection.html">Made in USA</a>
+      <a href="#">Shop All</a>
+    </div>
+    <div class="drawer__group">
+      <h4>Resources</h4>
+      <a href="#">About</a>
+      <a href="#">Support</a>
+      <a href="#">Research</a>
+      <a href="#">Archive</a>
+      <a href="#">Join</a>
+      <a href="#">Account</a>
+    </div>
+  </nav>
+</div>
+
+<div class="page">
+<div class="frame">
+
+  <!-- ============ COLLECTION HEAD ============ -->
+  <section class="section collection-head">
+    <h1>Made in the USA</h1>
+    <p>Since our founding we've been committed to American manufacturing. This gives us close access to our product&rsquo;s development and the conditions which they&rsquo;re made. We also work locally because we believe that the act of making quality products uplifts communities close to home.</p>
+  </section>
+
+  <!-- ============ TOOLBAR ============ -->
+  <section class="section toolbar">
+    <button>Filter &amp; Sort&nbsp;&nbsp;+</button>
+    <span class="toolbar__count">37 products</span>
+    <label>Sort by:
+      <select>
+        <option>Featured</option>
+        <option>Best selling</option>
+        <option>Alphabetically, A–Z</option>
+        <option>Alphabetically, Z–A</option>
+        <option>Price, low to high</option>
+        <option>Price, high to low</option>
+        <option>Date, old to new</option>
+        <option>Date, new to old</option>
+      </select>
+    </label>
+  </section>
+
+  <!-- ============ PRODUCT GRID ============ -->
+  <section class="section">
+    <div class="grid grid--4" id="collection-grid"><!-- cards injected --></div>
+  </section>
+
+  <!-- ============ NEWSLETTER ============ -->
+  <section class="section newsletter">
+    <h4>From our workshop to yours, subscribe and get the latest releases, updates, schemes, and dreams.</h4>
+    <form class="newsletter__form" onsubmit="return false">
+      <input type="email" placeholder="Enter email address">
+      <button class="btn btn--solid">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__brand">
+      <svg class="logo-x" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M14 6 L58 50 L50 58 L6 14 Z"/>
+        <path d="M50 6 L58 14 L14 58 L6 50 Z"/>
+      </svg>
+      <div class="footer__legal">
+        <a href="#">Terms of Service</a>
+        <a href="#">Special Promo Terms</a>
+        <a href="#">Shipping Policies</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Acknowledgements</a>
+        <p>&copy; MADE artes, 2026.</p>
+      </div>
+    </div>
+    <div>
+      <h5>Shop</h5>
+      <a href="collection.html">New</a>
+      <a href="#">Apparel</a>
+      <a href="#">Accessories</a>
+      <a href="#">Gear</a>
+      <a href="#">Home &amp; Workshop</a>
+      <a href="#">Shop All</a>
+    </div>
+    <div>
+      <h5>Resources</h5>
+      <a href="#">Support</a>
+      <a href="#">Account Login</a>
+      <a href="#">The Archive</a>
+      <a href="#">Research</a>
+      <a href="#">Join</a>
+    </div>
+    <div>
+      <h5>Company</h5>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">Instagram</a>
+    </div>
+  </footer>
+
+</div><!-- /frame -->
+</div><!-- /page -->
+
+<script>
+  // Product data mirrors the live /collections/made-in-usa collection.
+  // badge: null | "NEW" | "SOLD OUT" | "LOW STOCK" | "SALE"
+  const products = [
+    { title: "Possibilities Jacket Navy", price: "$398.00", badge: "NEW", swatches: 2 },
+    { title: "Possibilities Jacket Tan", price: "$398.00", badge: "NEW", swatches: 2 },
+    { title: "Gerstner 41D Founder’s Edition", price: "$2,150.00", badge: "NEW" },
+    { title: "Measure Twice 12 inch Solid Brass Ruler", price: "$48.00", badge: "SOLD OUT" },
+    { title: "Measure Twice 6 inch Solid Brass Ruler", price: "$36.00", badge: "SOLD OUT" },
+    { title: "Gfeller Case Small", price: "$328.00" },
+    { title: "Gfeller Case Large", price: "$498.00" },
+    { title: "Horseshoe Crab Opener", price: "$110.00" },
+    { title: "NWBW Field Knife (BMC Edition)", price: "$450.00", badge: "SOLD OUT" },
+    { title: "Spark (Straight-Hold Edition)", price: "$350.00", badge: "SOLD OUT" },
+    { title: "Panama Cloth Service Jacket", price: "$398.00", badge: "NEW", href: "product.html" },
+    { title: "Standard 5-Pocket Pant M2 Undyed", price: "$188.00", badge: "NEW", swatches: 3 },
+    { title: "Standard 5-Pocket Pant M2 Field Brown", price: "$188.00", badge: "NEW", swatches: 3 },
+    { title: "Standard 5-Pocket Pant M2 Khaki", price: "$188.00", badge: "NEW", swatches: 3 },
+    { title: "Spare Parts Trays (Set of 3), Go Slow Edition", price: "$92.00", badge: "SOLD OUT", swatches: 2 },
+    { title: "Spare Parts Trays (Set of 3) - Matte Black", price: "$92.00", badge: "SOLD OUT", swatches: 2 },
+    { title: "Type 6 Strongbox - Matte Black", price: "$52.00", badge: "SOLD OUT", swatches: 3 },
+    { title: "Type P Strongbox - Matte Black", price: "$42.00", badge: "SOLD OUT", swatches: 3 },
+    { title: "Service Jacket Special Edition Navy", price: "$428.00", swatches: 2 },
+    { title: "Service Jacket Special Edition Olive Drab", price: "$428.00", swatches: 2 },
+    { title: "Cap of Courage", price: "$68.00", swatches: 4 },
+    { title: "Wool-Lined Waxed Field Jacket Black", price: "$698.00", badge: "LOW STOCK", swatches: 2 },
+    { title: "Wool-Lined Waxed Field Jacket Tan", price: "$698.00", badge: "LOW STOCK", swatches: 2 },
+    { title: "Standard Wool Socks", price: "$36.00", swatches: 3 },
+    { title: "Field Pant Special Edition Navy", price: "$285.00", swatches: 2 },
+    { title: "Field Pant Special Edition Olive Drab", price: "$285.00", swatches: 2 },
+    { title: "Standard 5-Pocket Pant Tan", price: "$188.00", swatches: 2 },
+    { title: "Standard 5-Pocket Pant Deep Olive", price: "$188.00", swatches: 2 },
+    { title: "Standard Belt", price: "$111.00", was: "$148.00", badge: "SALE" },
+    { title: "Dehen Shawl Neck Sweater Moss Green", price: "$428.00", swatches: 2 },
+    { title: "“Good as Gold” Silk-Screened Poster", price: "$34.00", was: "$68.00", badge: "SALE" },
+    { title: "Famous Red Belt", price: "$198.00" },
+    { title: "PB-S’s Utility Vest Tan", price: "$148.50", was: "$198.00", badge: "SOLD OUT", swatches: 3 },
+    { title: "Rolling Footlocker", price: "$398.00", badge: "SOLD OUT" },
+    { title: "Type 12 Strongbox - Matte Black", price: "$72.00", badge: "SOLD OUT", swatches: 3 },
+    { title: "Cockle Shell Opener", price: "$98.00", badge: "SOLD OUT" },
+    { title: "The Optimist", price: "$450.00", badge: "NEW" }
+  ];
+
+  const grid = document.getElementById('collection-grid');
+  grid.innerHTML = products.map(p => `
+    <a class="card" href="${p.href || '#'}">
+      <div class="card__media">
+        ${p.badge ? `<span class="card__badge ${p.badge === 'SOLD OUT' ? 'card__badge--soldout' : ''}">${p.badge}</span>` : ''}
+        <div class="ph ph--square" data-label="Product"></div>
+      </div>
+      ${p.swatches ? `<div class="card__swatches">${'<span class="swatch"></span>'.repeat(p.swatches)}</div>` : ''}
+      <div class="card__info">
+        <h3 class="card__title">${p.title}</h3>
+        <span class="card__price">${p.was ? `<s>${p.was}</s>` : ''}${p.price}</span>
+      </div>
+    </a>`).join('');
+
+  const drawer = document.querySelector('[data-drawer]');
+  document.querySelector('[data-drawer-open]').addEventListener('click', () => drawer.classList.add('is-open'));
+  document.querySelector('[data-drawer-close]').addEventListener('click', () => drawer.classList.remove('is-open'));
+  drawer.addEventListener('click', e => { if (e.target === drawer) drawer.classList.remove('is-open'); });
+</script>
+</body>
+</html>
