@@ -1,0 +1,40 @@
+export default {
+  name: 'product',
+  title: 'Product',
+  type: 'document',
+  fields: [
+    {name: 'title', title: 'Title', type: 'string', validation: (r) => r.required()},
+    {name: 'slug', title: 'Slug', type: 'slug', options: {source: 'title'}, validation: (r) => r.required()},
+    {name: 'price', title: 'Price', type: 'number', validation: (r) => r.required().positive()},
+    {name: 'compareAt', title: 'Compare-at price (strikethrough)', type: 'number'},
+    {
+      name: 'badge',
+      title: 'Badge',
+      type: 'string',
+      options: {list: ['NEW', 'SOLD OUT', 'LOW STOCK', 'SALE'], layout: 'radio'},
+    },
+    {name: 'swatches', title: 'Color swatch count', type: 'number'},
+    {name: 'image', title: 'Image', type: 'image', options: {hotspot: true}},
+    {
+      name: 'collection',
+      title: 'Collection',
+      type: 'string',
+      options: {list: [{title: 'Made in the USA', value: 'made-in-usa'}]},
+    },
+    {name: 'order', title: 'Sort order', type: 'number'},
+    {name: 'description', title: 'Description (blank line = new paragraph)', type: 'text', rows: 10},
+    {name: 'sizes', title: 'Sizes', type: 'array', of: [{type: 'string'}]},
+    {name: 'care', title: 'Care', type: 'text', rows: 4},
+    {name: 'origin', title: 'Origin', type: 'string'},
+    {
+      name: 'related',
+      title: 'Related products',
+      type: 'array',
+      of: [{type: 'reference', to: [{type: 'product'}]}],
+    },
+  ],
+  preview: {
+    select: {title: 'title', price: 'price', media: 'image'},
+    prepare: ({title, price, media}) => ({title, subtitle: price ? `$${price}` : '', media}),
+  },
+}

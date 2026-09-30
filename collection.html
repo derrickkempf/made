@@ -3,10 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Made in the USA — MADE artes Clone</title>
+<title>The Archive — MADE artes</title>
 <link rel="stylesheet" href="styles.css">
+<script src="js/sanity.js" defer></script>
 </head>
-<body>
+<body data-page="collection">
 
 <!-- ============ HEADER ============ -->
 <div class="header-wrap">
@@ -15,7 +16,7 @@
       <span style="margin-right:1rem">Menu</span>
       <svg class="icon-search" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" style="width:1.6rem"><path d="M1 3h14M1 8h14M1 13h14"/></svg>
     </button>
-    <a class="header__logo" href="index.html">MADE artes</a>
+    <a class="header__logo" href="index.html"><img src="https://static.showit.co/file/nnPk0rTkYqnycb1NZyvjJQ/196406/made-logo-blue-1.svg" alt="MADE artes" style="height:2.2rem"></a>
     <div class="header__actions">
       <button aria-label="Search">
         <svg class="icon-search" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="7" cy="7" r="5"/><path d="M11 11l4 4"/></svg>
@@ -31,23 +32,19 @@
   <nav class="drawer__panel">
     <button class="ui drawer__close" data-drawer-close>Close ✕</button>
     <div class="drawer__group">
-      <h4>Shop</h4>
-      <a href="collection.html">New Arrivals</a>
-      <a href="#">Apparel</a>
-      <a href="#">Accessories</a>
-      <a href="#">Gear</a>
-      <a href="#">Home &amp; Workshop</a>
-      <a href="collection.html">Made in USA</a>
-      <a href="#">Shop All</a>
+      <h4>Work</h4>
+      <a href="collection.html">Brand Identity</a>
+      <a href="#">Packaging</a>
+      <a href="#">Signage &amp; Wayfinding</a>
+      <a href="#">Campaigns</a>
+      <a href="collection.html">All Work</a>
     </div>
     <div class="drawer__group">
-      <h4>Resources</h4>
+      <h4>Studio</h4>
       <a href="#">About</a>
-      <a href="#">Support</a>
-      <a href="#">Research</a>
-      <a href="#">Archive</a>
-      <a href="#">Join</a>
-      <a href="#">Account</a>
+      <a href="#">Journal</a>
+      <a href="#">Contact</a>
+      <a href="#">Instagram</a>
     </div>
   </nav>
 </div>
@@ -57,14 +54,14 @@
 
   <!-- ============ COLLECTION HEAD ============ -->
   <section class="section collection-head">
-    <h1>Made in the USA</h1>
-    <p>Since our founding we've been committed to American manufacturing. This gives us close access to our product&rsquo;s development and the conditions which they&rsquo;re made. We also work locally because we believe that the act of making quality products uplifts communities close to home.</p>
+    <h1>The Archive</h1>
+    <p>A growing repository of projects from our past&mdash;identities, packaging, wayfinding, and campaigns made for entrepreneurs who are ready to stand out. Every piece here started the same way: a business in the flow, ready to let go of cookie-cutter design.</p>
   </section>
 
   <!-- ============ TOOLBAR ============ -->
   <section class="section toolbar">
     <button>Filter &amp; Sort&nbsp;&nbsp;+</button>
-    <span class="toolbar__count">37 products</span>
+    <span class="toolbar__count">37 projects</span>
     <label>Sort by:
       <select>
         <option>Featured</option>
@@ -86,7 +83,7 @@
 
   <!-- ============ NEWSLETTER ============ -->
   <section class="section newsletter">
-    <h4>From our workshop to yours, subscribe and get the latest releases, updates, schemes, and dreams.</h4>
+    <h4>From our studio to yours, subscribe and get the latest work, launches, schemes, and dreams.</h4>
     <form class="newsletter__form" onsubmit="return false">
       <input type="email" placeholder="Enter email address">
       <button class="btn btn--solid">Subscribe</button>
@@ -96,10 +93,7 @@
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
     <div class="footer__brand">
-      <svg class="logo-x" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M14 6 L58 50 L50 58 L6 14 Z"/>
-        <path d="M50 6 L58 14 L14 58 L6 50 Z"/>
-      </svg>
+      <img class="logo-x" src="https://static.showit.co/file/_Y_RP4hHoagQGkwWtHYVzA/196406/x-icon.svg" alt="MADE artes">
       <div class="footer__legal">
         <a href="#">Terms of Service</a>
         <a href="#">Special Promo Terms</a>
@@ -110,24 +104,21 @@
       </div>
     </div>
     <div>
-      <h5>Shop</h5>
-      <a href="collection.html">New</a>
-      <a href="#">Apparel</a>
-      <a href="#">Accessories</a>
-      <a href="#">Gear</a>
-      <a href="#">Home &amp; Workshop</a>
-      <a href="#">Shop All</a>
+      <h5>Work</h5>
+      <a href="collection.html">Brand Identity</a>
+      <a href="#">Packaging</a>
+      <a href="#">Signage &amp; Wayfinding</a>
+      <a href="#">Campaigns</a>
+      <a href="collection.html">All Work</a>
     </div>
     <div>
       <h5>Resources</h5>
-      <a href="#">Support</a>
-      <a href="#">Account Login</a>
+      <a href="#">Journal</a>
       <a href="#">The Archive</a>
-      <a href="#">Research</a>
       <a href="#">Join</a>
     </div>
     <div>
-      <h5>Company</h5>
+      <h5>Studio</h5>
       <a href="#">About</a>
       <a href="#">Contact</a>
       <a href="#">Instagram</a>
@@ -181,11 +172,11 @@
   ];
 
   const grid = document.getElementById('collection-grid');
-  grid.innerHTML = products.map(p => `
+  grid.innerHTML = products.map((p, i) => `
     <a class="card" href="${p.href || '#'}">
       <div class="card__media">
         ${p.badge ? `<span class="card__badge ${p.badge === 'SOLD OUT' ? 'card__badge--soldout' : ''}">${p.badge}</span>` : ''}
-        <div class="ph ph--square" data-label="Product"></div>
+        <div class="ph ph--square has-img" data-label="Product"><img src="images/img-${(i % 11) + 1}.jpg" alt=""></div>
       </div>
       ${p.swatches ? `<div class="card__swatches">${'<span class="swatch"></span>'.repeat(p.swatches)}</div>` : ''}
       <div class="card__info">

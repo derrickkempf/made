@@ -5,8 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>MADE artes — Clone</title>
 <link rel="stylesheet" href="styles.css">
+<script src="js/sanity.js" defer></script>
 </head>
-<body>
+<body data-page="home">
 
 <!-- ============ HEADER ============ -->
 <div class="header-wrap">
@@ -15,7 +16,7 @@
       <span style="margin-right:1rem">Menu</span>
       <svg class="icon-search" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" style="width:1.6rem"><path d="M1 3h14M1 8h14M1 13h14"/></svg>
     </button>
-    <a class="header__logo" href="index.html">MADE artes</a>
+    <a class="header__logo" href="index.html"><img src="https://static.showit.co/file/nnPk0rTkYqnycb1NZyvjJQ/196406/made-logo-blue-1.svg" alt="MADE artes" style="height:2.2rem"></a>
     <div class="header__actions">
       <button aria-label="Search">
         <svg class="icon-search" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="7" cy="7" r="5"/><path d="M11 11l4 4"/></svg>
@@ -31,23 +32,19 @@
   <nav class="drawer__panel">
     <button class="ui drawer__close" data-drawer-close>Close ✕</button>
     <div class="drawer__group">
-      <h4>Shop</h4>
-      <a href="collection.html">New Arrivals</a>
-      <a href="#">Apparel</a>
-      <a href="#">Accessories</a>
-      <a href="#">Gear</a>
-      <a href="#">Home &amp; Workshop</a>
-      <a href="collection.html">Made in USA</a>
-      <a href="#">Shop All</a>
+      <h4>Work</h4>
+      <a href="collection.html">Brand Identity</a>
+      <a href="#">Packaging</a>
+      <a href="#">Signage &amp; Wayfinding</a>
+      <a href="#">Campaigns</a>
+      <a href="collection.html">All Work</a>
     </div>
     <div class="drawer__group">
-      <h4>Resources</h4>
+      <h4>Studio</h4>
       <a href="#">About</a>
-      <a href="#">Support</a>
-      <a href="#">Research</a>
-      <a href="#">Archive</a>
-      <a href="#">Join</a>
-      <a href="#">Account</a>
+      <a href="#">Journal</a>
+      <a href="#">Contact</a>
+      <a href="#">Instagram</a>
     </div>
   </nav>
 </div>
@@ -57,100 +54,100 @@
 
   <!-- ============ HERO (video placeholder) ============ -->
   <section class="section hero">
-    <div class="ph ph--hero" data-label="Hero video"></div>
+    <div class="ph ph--hero has-img" data-label="Hero"><img src="https://static.showit.co/2400/jaXju_Q3CNPQMM9JqaiQgw/196406/shwoit-billboard-mockup.jpg" alt=""></div>
     <div class="hero__caption">
-      <h2>From put-in to take-out: a lifeline and icon of the northwoods. Forged in the USA from 5160 carbon steel.</h2>
-      <a class="btn btn--solid" href="product.html">Shop</a>
+      <h2>Making authentic art and design for entrepreneurs who are ready to stand out.</h2>
+      <a class="btn btn--solid" href="product.html">Start a Project</a>
     </div>
   </section>
 
   <!-- ============ NEW RELEASES ============ -->
   <section class="section">
-    <h2 class="section-title">New Releases</h2>
+    <h2 class="section-title">Selected Work</h2>
     <div class="grid grid--4">
       <a class="card" href="product.html">
-        <div class="card__media"><span class="card__badge">New</span><div class="ph ph--square" data-label="Product"></div></div>
-        <div class="card__info"><h3 class="card__title">Sailor&rsquo;s Knife</h3><span class="card__price">$320.00</span></div>
+        <div class="card__media"><span class="card__badge">New</span><div class="ph ph--square has-img" data-label="Project"><img src="https://static.showit.co/1200/lkIDuWh0Qm4BVAVY9FmIwA/196406/241028-spark-012.jpg" alt=""></div></div>
+        <div class="card__info"><h3 class="card__title">Spark Brand Identity</h3><span class="card__price">2026</span></div>
       </a>
       <a class="card" href="product.html">
-        <div class="card__media"><span class="card__badge">New</span><div class="ph ph--square" data-label="Product"></div></div>
-        <div class="card__info"><h3 class="card__title">Solid Brass Dice</h3><span class="card__price">$48.00</span></div>
+        <div class="card__media"><span class="card__badge">New</span><div class="ph ph--square has-img" data-label="Project"><img src="https://static.showit.co/1200/-qtQ_AaOTz8wtXuN7oAWNQ/196406/241028-spark-001.jpg" alt=""></div></div>
+        <div class="card__info"><h3 class="card__title">Spark Packaging</h3><span class="card__price">2026</span></div>
       </a>
       <a class="card" href="product.html">
-        <div class="card__media"><span class="card__badge">New</span><div class="ph ph--square" data-label="Product"></div></div>
-        <div class="card__info"><h3 class="card__title">The Optimist</h3><span class="card__price">$450.00</span></div>
+        <div class="card__media"><span class="card__badge">New</span><div class="ph ph--square has-img" data-label="Project"><img src="https://static.showit.co/1200/8v1b9JMwf_T5GtJSN9HBcQ/196406/spark-mockups-flag-signs3.png" alt=""></div></div>
+        <div class="card__info"><h3 class="card__title">Spark Signage &amp; Environment</h3><span class="card__price">2026</span></div>
       </a>
       <a class="card" href="product.html">
-        <div class="card__media"><span class="card__badge">New</span><div class="ph ph--square" data-label="Product"></div></div>
-        <div class="card__info"><h3 class="card__title">Ten-Inch Paper Scissors</h3><span class="card__price">$128.00</span></div>
+        <div class="card__media"><span class="card__badge">New</span><div class="ph ph--square has-img" data-label="Project"><img src="https://static.showit.co/1200/zOWo9-_csaG7Ylab_oZq7Q/196406/spark-24-bag_1.png" alt=""></div></div>
+        <div class="card__info"><h3 class="card__title">Spark Merch &amp; Goods</h3><span class="card__price">2024</span></div>
       </a>
     </div>
   </section>
 
-  <!-- ============ FEATURE: 41D ============ -->
+  <!-- ============ FEATURE: STAND OUT ============ -->
   <section class="section">
-    <div class="feature__media"><div class="ph ph--banner" data-label="41D chest"></div></div>
+    <div class="feature__media"><div class="ph ph--banner has-img" data-label="Brand guidelines"><img src="https://static.showit.co/2400/jxjZnelT3jBg28mRGfrkWQ/196406/pindustry-brand-guidelines.jpg" alt=""></div></div>
     <div class="feature__body">
-      <span class="eyebrow">Made in USA</span>
-      <h2 class="feature__heading">The 41D Is Back</h2>
-      <p>When we first introduced the 41D in November 2014, we didn't change much&mdash;we didn't need to&mdash;kiln-dried American cherry, plain sawn and finished with brass hardware.</p>
+      <span class="eyebrow">A Creative Studio</span>
+      <h2 class="feature__heading">Ready to Stand Out</h2>
+      <p>Your business is growing, expanding, and in the flow, but you are ready to let go of cookie-cutter design. You desire to infuse your flavor into the visual identity of your projects.</p>
       <a class="btn btn--outline" href="product.html">Discover More</a>
     </div>
   </section>
 
-  <!-- ============ ORIGIN STORY ============ -->
+  <!-- ============ TAILOR-MADE ============ -->
   <section class="section">
-    <div class="feature__media"><div class="ph ph--banner" data-label="Origin story"></div></div>
+    <div class="feature__media"><div class="ph ph--banner has-img" data-label="Wayfinding"><img src="https://static.showit.co/2400/HJEJjFiY_x85IO9Xsh_IQA/196406/pindustry-wayfinding.jpg" alt=""></div></div>
     <div class="feature__body">
-      <span class="eyebrow">Origin Story</span>
-      <p class="feature__statement">We champion American makers because it gives us an unprecedented connection to the development and manufacturing of our products, and it's an investment in the people and communities close to home.</p>
-      <a class="btn btn--outline" href="collection.html">Shop Made in the USA</a>
+      <span class="eyebrow">Tailor-Made</span>
+      <p class="feature__statement">MADE artes offers tailor-made solutions that will help you manifest your vision into reality.</p>
+      <a class="btn btn--outline" href="collection.html">See the Work</a>
     </div>
   </section>
 
   <!-- ============ THE ARCHIVE ============ -->
   <section class="section archive">
     <h2>The Archive</h2>
-    <p>A growing repository of over 250 products from our past</p>
+    <p>A growing repository of projects from our past</p>
     <a class="btn btn--inverse" href="collection.html">Visit</a>
   </section>
 
-  <!-- ============ QUALITY WILL PREVAIL ============ -->
+  <!-- ============ SOMETHING BEAUTIFUL ============ -->
   <section class="section">
-    <div class="feature__media"><div class="ph ph--banner" data-label="Still optimistic"></div></div>
+    <div class="feature__media"><div class="ph ph--banner has-img" data-label="Coopstock"><img src="https://static.showit.co/2400/uT1zimYYUdQ2mSDgvaaZMg/196406/coopstock_2026_-_banner.png" alt=""></div></div>
     <div class="feature__body">
-      <span class="eyebrow">Est. 2009 / Re-Est. 2024</span>
-      <h2 class="feature__heading feature__heading--serif">Quality Will Prevail</h2>
-      <p>Making, buying, using, and owning quality products should uplift everyone at every stage of a product&rsquo;s life. In the disposable age of planned obsolescence, prioritizing quality is a responsible and optimistic path forward.</p>
-      <a class="btn btn--outline" href="#">Learn More About Us</a>
+      <span class="eyebrow">MADE artes</span>
+      <h2 class="feature__heading feature__heading--serif">Let&rsquo;s Make Something Beautiful Together</h2>
+      <p>Tell us a few things about your project and goals&mdash;where your business is headed, and the flavor you want the world to see&mdash;and we&rsquo;ll help you get there.</p>
+      <a class="btn btn--outline" href="#">Get in Touch</a>
     </div>
   </section>
 
   <!-- ============ RESEARCH ============ -->
   <section class="section research">
-    <h2 class="section-title">Research</h2>
+    <h2 class="section-title">Case Studies</h2>
     <div class="grid grid--3">
       <article class="card">
-        <div class="ph ph--wide" data-label="Journal"></div>
+        <div class="ph ph--wide has-img" data-label="Case study"><img src="https://static.showit.co/1200/uP2cKqa0733eEZaYuvView/196406/pindustry_menus_flatlay_1.jpg" alt=""></div>
         <div class="card__body">
-          <h3 class="card__title">Hello from New Mexico</h3>
-          <p class="card__excerpt">I hadn't seen the ground since last November. Don't mention the sun. It's been a real winter out east&hellip;</p>
+          <h3 class="card__title">Pindustry: Menus &amp; Wayfinding</h3>
+          <p class="card__excerpt">A full identity system built from the guidelines up&mdash;menus, signage, and environmental wayfinding that carry one voice across every surface&hellip;</p>
           <a class="ui link-underline" href="#">Discover more</a>
         </div>
       </article>
       <article class="card">
-        <div class="ph ph--wide" data-label="Journal"></div>
+        <div class="ph ph--wide has-img" data-label="Case study"><img src="https://static.showit.co/1200/EnBLf8_mw_VQwrvR-uoZ6A/196406/coopstock_2026_-_poster.png" alt=""></div>
         <div class="card__body">
-          <h3 class="card__title">In the Field with GL Richardson</h3>
-          <p class="card__excerpt">GL Richardson is a figurative oil painter based in Santa Fe, New Mexico. By his own account, becoming one was a ridiculous decision&hellip;</p>
+          <h3 class="card__title">Coopstock 2026</h3>
+          <p class="card__excerpt">Posters, banners, and show collateral for the 2026 festival&mdash;loud, analog, and built to be pinned up, handed out, and kept&hellip;</p>
           <a class="ui link-underline" href="#">Discover more</a>
         </div>
       </article>
       <article class="card">
-        <div class="ph ph--wide" data-label="Journal"></div>
+        <div class="ph ph--wide has-img" data-label="Case study"><img src="https://static.showit.co/2400/mo6ww8p63d6Azk6eIiuLag/196406/treasuredao-trove-badges-backpack.jpg" alt=""></div>
         <div class="card__body">
-          <h3 class="card__title">Repair &amp; Restoration Directory</h3>
-          <p class="card__excerpt">A growing directory of services and supplies for the repair and restoration of apparel, footwear, and gear&hellip;</p>
+          <h3 class="card__title">TreasureDAO Trove Badges</h3>
+          <p class="card__excerpt">A badge system that translates a digital treasure economy into tactile, collectible goods you can sew onto a backpack&hellip;</p>
           <a class="ui link-underline" href="#">Discover more</a>
         </div>
       </article>
@@ -159,7 +156,7 @@
 
   <!-- ============ NEWSLETTER ============ -->
   <section class="section newsletter">
-    <h4>From our workshop to yours, subscribe and get the latest releases, updates, schemes, and dreams.</h4>
+    <h4>From our studio to yours, subscribe and get the latest work, launches, schemes, and dreams.</h4>
     <form class="newsletter__form" onsubmit="return false">
       <input type="email" placeholder="Enter email address">
       <button class="btn btn--solid">Subscribe</button>
@@ -169,10 +166,7 @@
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
     <div class="footer__brand">
-      <svg class="logo-x" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M14 6 L58 50 L50 58 L6 14 Z"/>
-        <path d="M50 6 L58 14 L14 58 L6 50 Z"/>
-      </svg>
+      <img class="logo-x" src="https://static.showit.co/file/_Y_RP4hHoagQGkwWtHYVzA/196406/x-icon.svg" alt="MADE artes">
       <div class="footer__legal">
         <a href="#">Terms of Service</a>
         <a href="#">Special Promo Terms</a>
@@ -183,24 +177,21 @@
       </div>
     </div>
     <div>
-      <h5>Shop</h5>
-      <a href="collection.html">New</a>
-      <a href="#">Apparel</a>
-      <a href="#">Accessories</a>
-      <a href="#">Gear</a>
-      <a href="#">Home &amp; Workshop</a>
-      <a href="#">Shop All</a>
+      <h5>Work</h5>
+      <a href="collection.html">Brand Identity</a>
+      <a href="#">Packaging</a>
+      <a href="#">Signage &amp; Wayfinding</a>
+      <a href="#">Campaigns</a>
+      <a href="collection.html">All Work</a>
     </div>
     <div>
       <h5>Resources</h5>
-      <a href="#">Support</a>
-      <a href="#">Account Login</a>
+      <a href="#">Journal</a>
       <a href="#">The Archive</a>
-      <a href="#">Research</a>
       <a href="#">Join</a>
     </div>
     <div>
-      <h5>Company</h5>
+      <h5>Studio</h5>
       <a href="#">About</a>
       <a href="#">Contact</a>
       <a href="#">Instagram</a>

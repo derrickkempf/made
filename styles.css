@@ -194,12 +194,20 @@ summary::-webkit-details-marker { display: none; }
 .drawer__group h4 { font-family: var(--font-ui); font-size: 1.3rem; letter-spacing: var(--track-ui); text-transform: uppercase; margin-bottom: 1rem; }
 .drawer__group a { display: block; padding: .5rem 0; font-size: 1.5rem; }
 
-/* ---- Image placeholders (photos intentionally omitted) ---- */
+/* ---- Image placeholders (filled by Sanity content when configured) ---- */
 .ph {
   position: relative;
   background: var(--placeholder);
   overflow: hidden;
 }
+.ph > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ph.has-img::after { content: none; }
 .ph::after {
   content: attr(data-label);
   position: absolute;
